@@ -33,23 +33,6 @@ namespace ORMDal
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Games>(entity =>
-            //{
-            //    entity.HasOne(d => d.User)
-            //        .WithMany(p => p.Games)
-            //        .HasForeignKey(d => d.UserId)
-            //        .OnDelete(DeleteBehavior.ClientSetNull)
-            //        .HasConstraintName("FK_Games_UserId");
-            //});
-            //modelBuilder.Entity<Games>(entity =>
-            //{
-            //    entity.Property(e => e.UserId).IsRequired();
-
-            //    entity.Property(e => e.Score).IsRequired();
-
-            //    entity.Property(e => e.GameDate).HasColumnType("datetime"); 
-
-            //});
             modelBuilder.Entity<Games>(entity =>
             {
                 entity.Property(e => e.GameDate).HasColumnType("datetime");

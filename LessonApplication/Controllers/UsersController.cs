@@ -23,11 +23,6 @@ namespace pacmanGame.Controllers
         {
             _bl = bl;
         }
-        //private IGamesBL _blg;
-        //public UsersController(IGamesBL blg)
-        //{
-        //    _blg = blg;
-        //}
         public IActionResult Index()
         {
             return View();
@@ -51,8 +46,6 @@ namespace pacmanGame.Controllers
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
 
                 return RedirectToAction("GameStart", "Home");
-                //return RedirectToAction("Index", "Home");
-                //return View();
             }
             else return View("Login");
         }
@@ -95,27 +88,6 @@ namespace pacmanGame.Controllers
             // установка куки
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
             return RedirectToAction("GameStart", "Home");
-            //return RedirectToAction("Index", "Home");
-            //return RedirectToAction("Game", "Home");
-
         }
-
-        //[HttpPost]
-        //public async Task<IActionResult> SaveGamesResult(GameModel model)
-        //{
-        //    Game game = new Game()
-        //    {
-        //        UserId = model.UserId,
-        //        Score = model.Score,
-        //    };
-        //    // добавляем игру
-        //    _blg.AddGame(game);
-        //    User user = _bl.GetById(model.UserId);
-        //    var identity = new CustomUserIdentity(user);
-        //    // установка куки
-        //    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
-        //    return RedirectToAction("Index", "Home");
-        //    //return RedirectToAction("Game", "Home");
-        //}
     }
 }

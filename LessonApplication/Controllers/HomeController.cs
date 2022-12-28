@@ -35,9 +35,7 @@ namespace pacmanGame.Controllers
             {
                 var userName = User.Identity.Name;
             }
-
             return View("Index");
-            //return RedirectToAction("GameStart", "Home");
         }
 
         public IActionResult Privacy()
@@ -51,15 +49,6 @@ namespace pacmanGame.Controllers
             return View();
         }
 
-        //public IActionResult SaveGame()
-        //{
-        //    return View();
-        //}
-        //public IActionResult GameStart()
-        //{
-        //    return View();
-        //}
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -69,14 +58,6 @@ namespace pacmanGame.Controllers
         [Authorize]
         public IActionResult PGame(int id, string name)
         {
-            //Game game = new Game();
-            //GameModel gameModel = new GameModel()
-            //{
-            //    Score = 0,
-            //    UserId = _userBL.GetByLogin(User.Identity.Name).Id
-            //};
-            //return View(gameModel);
-            //return View("Game");
             TempData["Success"] = "Success";
 
             if (User.Identity.IsAuthenticated)
@@ -86,20 +67,6 @@ namespace pacmanGame.Controllers
 
             return View("Game");
         }
-
-        //[HttpPost]
-        //[Authorize]
-        //public IActionResult SeveGame(int score)
-        //{
-        //    Game game = new Game()
-        //    {
-        //        Score = score,
-        //        UserId = _userBL.GetByLogin(User.Identity?.Name).Id
-        //    };
-        //    _gamesBL.AddGame(game);
-
-        //    return RedirectToAction("Index", "Home");
-        //}
 
         [HttpGet]
         [Authorize]
@@ -117,13 +84,8 @@ namespace pacmanGame.Controllers
                     Score = 0,
                     UserId = _userBL.GetByLogin(User.Identity.Name).Id
                 };
-
-                //return RedirectToAction("PGame", "Home");
-                //return View("Index");
                 return View(gameModel);
             }
-            //return View(gameModel);
-            //return RedirectToAction("Index", "Home");
             return View();
         }
         [HttpGet]
@@ -145,10 +107,7 @@ namespace pacmanGame.Controllers
             };
             _gamesBL.AddGame(game);
 
-            //return RedirectToAction("Index", "Home");
-            //return View("SaveGame");
             return RedirectToAction("GameStart", "Home");
-            //return RedirectToAction("SaveGame", "Home");
         }
     }
 

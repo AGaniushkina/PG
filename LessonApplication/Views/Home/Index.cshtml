@@ -1,45 +1,4 @@
-﻿@*@{
-        ViewData["Title"] = "Home page";
-        Layout = "_Layout";
-    }
-    <!DOCTYPE html>
-    <html lang="en">
-
-
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-
-        <title>Home</title>
-
-    </head>
-    <body>
-
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Login">LogOff</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PGame">Game</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    </body>
-    </html>*@
-
-@{ ViewData["Title"] = "Home Page";
+﻿@{ ViewData["Title"] = "Home Page";
     Layout = "_Layout"; }
 <head>
     <meta charset="utf-8" />
@@ -82,40 +41,17 @@
     <canvas></canvas>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-
-                @*<a class="nav-link text-dark" asp-area="" asp-controller="Games" asp-action="SaveGameResult">SaveGame</a>*@
+            @*<div class="container">
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SaveGame">SaveGame</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            </div>
+            </div>*@
             <div id="displayButtonReplay" class="replayMiddleDisplayContainer">
-                <button class="replayButtonStyle" onclick="saveGame()">Replay</button>
+                <button class="replayButtonStyle" onclick="saveGame()">Save</button>
             </div>
         </nav>
-
-        <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">-->
-        @*<a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Login">LogOff</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>*@
-        <!--<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Game</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Login">LogOff</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>-->
     </header>
 </bode>
 

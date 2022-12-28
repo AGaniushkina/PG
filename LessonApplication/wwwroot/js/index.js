@@ -17,11 +17,6 @@ class Boundary {
     }
 
     draw() {
-        //  c.fillStyle = blue
-        //  c.fillRect(this.position.x, this.position.y,
-        //      this.width, this.height
-        //  )
-
         c.drawImage(this.image, this.position.x, this.position.y)
     }
 }
@@ -630,10 +625,6 @@ function animate() {
     })
 
     player.update()
-    // player.velocity.x = 0
-    // player.velocity.y = 0
-    //player.velocity.x = 0
-    //player.velocity.y = 0
 
     ghosts.forEach((ghost) => {
         ghost.update()
@@ -708,7 +699,6 @@ function animate() {
             ghost.prevCollisions = collisions
 
         if (JSON.stringify(collisions) !== JSON.stringify(ghost.prevCollisions)) {
-            //console.log('gogo')
 
             if (ghost.velocity.x > 0 && !ghost.prevCollisions.includes('right')) ghost.prevCollisions.push('right')
             else if (ghost.velocity.x < 0 && !ghost.prevCollisions.includes('left')) ghost.prevCollisions.push('left')
