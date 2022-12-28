@@ -803,9 +803,7 @@ addEventListener('keyup', ({ key }) => {
 })
 
 function saveGame(){
-    $.post('SaveGame', { score: this.score }, function () {
+    $.post('/Home/SaveGame', { score: score }, function () {
         location.reload();
     });
 }
-
-
