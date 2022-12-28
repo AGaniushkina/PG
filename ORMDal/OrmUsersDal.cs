@@ -24,7 +24,8 @@ namespace ORMDal
                     Id = user.Id,
                     Name = user.Name,
                     Login = user.Login,
-                    Password = user.Password
+                    Password = user.Password,
+                    FullName = user.FullName
                 };
                 return entity;
             }
@@ -47,7 +48,8 @@ namespace ORMDal
                     Id = user.Id,
                     Name = user.Name,
                     Login = user.Login,
-                    Password = user.Password
+                    Password = user.Password,
+                    FullName = user.FullName
                 };
                 return entity;
             }
@@ -66,7 +68,8 @@ namespace ORMDal
                     Name = user.Login,
                     Login = user.Login,
                     Password = user.Password,
-                    CreationDate = DateTime.Now
+                    CreationDate = DateTime.Now,
+                    FullName = user.FullName
                 });
                 context.SaveChanges();
             }

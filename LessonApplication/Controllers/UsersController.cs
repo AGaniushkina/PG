@@ -85,8 +85,9 @@ namespace pacmanGame.Controllers
             User user = new User()
             {
                 Login = model.Login,
-                Name = model.Name,
-                Password = model.Password
+                Name = model.Login,
+                Password = model.Password,
+                FullName = model.FullName
             };
             // добавляем пользователя
             _bl.AddUser(user);

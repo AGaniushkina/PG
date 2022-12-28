@@ -70,6 +70,8 @@ namespace ORMDal
 
                 entity.Property(e => e.Login).IsRequired();
 
+                entity.Property(e => e.FullName).IsRequired();
+
             });
 
             OnModelCreatingPartial(modelBuilder);

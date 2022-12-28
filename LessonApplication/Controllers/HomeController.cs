@@ -126,12 +126,12 @@ namespace pacmanGame.Controllers
             //return RedirectToAction("Index", "Home");
             return View();
         }
-        //[HttpGet]
-        //[Authorize]
-        //public IActionResult SaveGame()
-        //{
-        //    return View();
-        //}
+        [HttpGet]
+        [Authorize]
+        public IActionResult SaveGame()
+        {
+            return View("SaveGame");
+        }
 
         [HttpPost]
         [Authorize]
@@ -148,6 +148,7 @@ namespace pacmanGame.Controllers
             //return RedirectToAction("Index", "Home");
             //return View("SaveGame");
             return RedirectToAction("GameStart", "Home");
+            //return RedirectToAction("SaveGame", "Home");
         }
     }
 

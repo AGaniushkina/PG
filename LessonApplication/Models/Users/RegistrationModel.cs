@@ -9,8 +9,8 @@ namespace pacmanGame.Models.Users
         //public string Login { get; set; }
         //public string Password { get; set; }
         [Required]
-        [Display(Name = "Имя")]
-        public string Name { get; set; }
+        [Display(Name = "Полное имя")]
+        public string FullName { get; set; }
 
         [Required]
         [Display(Name = "Login")]
